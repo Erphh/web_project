@@ -6,7 +6,9 @@
   background-color: #ffffff;
   font-family: "Montserrat", sans-serif;
 }
-
+body{
+  background-color: aqua;
+}
 li,a{
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -19,7 +21,7 @@ header{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: auto;
+  margin-left: -50px;
   flex-wrap: wrap;
   padding: 30px 10%;
 }
@@ -70,7 +72,7 @@ opacity: 20%;
   border-bottom-left-radius: 0px;
 }
 nav{
-  margin-left: auto;
+  margin-left: 10%;
 }
 .nav__links{
   list-style: none;
@@ -120,7 +122,7 @@ transition: all 0.3s ease 0s;
   
   .cart-count {
     height: 16px;
-     width: 16px;
+    width: 16px;
     position: absolute;
     padding: 0px 5px 5px 5px;
     top: -5px; 
@@ -160,10 +162,10 @@ img.arrow{
  }
  img.menu{
   background-color:  rgba(165, 169, 172, 0%);
-  margin-left:20px ;
+  margin-left:15px ;
  }
  div li{
-  margin-left: 10px;
+  margin-left: 0px;
  }
 
 .menu img{
@@ -300,13 +302,13 @@ footer{
   color: white;
 }
 .line{
-  width: 1200px;
-    height: 46px;
+  width: 1180px;
+    height: 41px;
     background-color: rgba(165, 169, 172, 20%);
     position: absolute;
     bottom: 0;
-    margin-left:6%;
-    margin-bottom: 5px;
+    margin-left:7%;
+    margin-bottom: 10px;
     
 }
 .footer{
@@ -319,12 +321,11 @@ footer{
   justify-content: space-around;
   flex-wrap: wrap;
     position: absolute;
-    
     bottom: 0;
   }
   .coll1{
     background-color: #1C4E8E;
-    
+    margin-left: 20px;
   }
   .coll1 li{
     list-style-type: none;
