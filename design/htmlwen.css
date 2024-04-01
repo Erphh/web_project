@@ -3,11 +3,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  font-family: "Montserrat", sans-serif;
+  background-color: transparent;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+html{
+  width: 100%;
+  max-width: 100%;}
+
 body{
-  background-color: aqua;
+  background-color: rgba(16, 19, 22, 10%);
 }
 li,a{
   font-family: "Montserrat", sans-serif;
@@ -21,15 +25,16 @@ header{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: -50px;
+  margin-left: -40px;
   flex-wrap: wrap;
   padding: 30px 10%;
+  width: 100%;
 }
 .all{
   padding-left: 20px;
   appearance: none;
-  background: url('arrow-down.svg') no-repeat right;
-  background-color: #fff;
+  background: url('Vector (Stroke)1.svg') no-repeat right;
+  background-color: transparent;
   background-position: 55px;;
   height: 50px;
   width: 93px;
@@ -72,7 +77,7 @@ opacity: 20%;
   border-bottom-left-radius: 0px;
 }
 nav{
-  margin-left: 10%;
+  margin-left: 15%;
 }
 .nav__links{
   list-style: none;
@@ -112,12 +117,12 @@ transition: all 0.3s ease 0s;
    }
    .cart-icon {
     position: relative;
-    display:grid /* Ensures the icon stays inline with text */
+    display:grid;
   }
   
   .cart-icon img {
-    font-size: 24px; /* Adjust font size as needed */
-    color: #000; /* Change icon color if desired */
+    font-size: 24px; 
+    color: #000; 
   }
   
   .cart-count {
@@ -171,6 +176,136 @@ img.arrow{
 .menu img{
   margin-left: 5px;
 }
+.home{
+display: flex;
+justify-content: flex-start;
+padding: 30px 10%;
+}
+.left-home{
+  position: relative;
+  display:grid ;
+  margin-top: 100px;
+  margin-bottom: 500px;
+ width: 599px;
+ height: 814px;
+}
+.circles{
+  width: min-content;
+  height: min-content;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  top: -70px;
+  left: -110px;
+}
+.cc3{
+  width: 15px;
+  height: 15px;
+  margin-left: 130px;
+
+}
+.cc1{
+  width: 63px;
+  height: 63px;
+  margin-top: 5px;
+  margin-left: 70px;
+
+}
+.cc2{
+  width: 36px;
+  height: 36px;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+.cc4{
+  width: 15px;
+  height: 15px;
+  line-height: 11px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.main-h1{
+  width: 544px;
+  height: 330px;
+  font-size: 80px;
+  font-weight: 700;
+  color: #101316;
+}
+.main-p{
+  width: 440px;
+  height: 90px;
+  font-size: 18px;
+  line-height: 30px;
+  position:relative;
+  margin-top: -25%;
+}
+.left-home button{
+  width: max-content;
+  margin-top: -30%;
+}
+.shop-now{
+  padding-left: 10px;
+  padding-right: 15x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  
+}
+.shop-now img{
+  padding-left: 10px;
+}
+.triangles{
+  width: min-content;
+  height: min-content;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  top:  54%;
+  right: 125px;
+}
+.tri1{
+  width: 21px;
+  height: 21px;
+  margin-left: 130px;
+
+}
+.tri2{
+  width: 34px;
+  height: 34px;
+  margin-top: 5px;
+  margin-left: 90px;
+
+}
+.tri3{
+  width: 70px;
+  height: 70px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.right-home {
+  position: relative;
+  display:grid ;
+  margin-top: 100px;
+  margin-bottom: 500px;
+ width: 599px;
+ height: 814px;
+}
+.young{
+  position: absolute;
+  padding: 0px 5px 5px 5px;
+    top: -120px; 
+    right: 25px; 
+}
+.c1{
+  position: absolute;
+  padding: 0px 5px 5px 5px;
+    bottom: 20%;
+    right: -4%; 
+}
+
 footer{
   background-color: #1C4E8E;
   width: 1440px;
@@ -178,7 +313,7 @@ footer{
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  position: absolute;
+  position: relative;
   padding-top: 30px;
   padding-left: 30px;
   bottom: 0;
@@ -303,13 +438,13 @@ footer{
 }
 .line{
   width: 1180px;
-    height: 41px;
+    height: 1px;
     background-color: rgba(165, 169, 172, 20%);
-    position: absolute;
+    position: relative;
     bottom: 0;
-    margin-left:7%;
+    margin-left:3%;
     margin-bottom: 10px;
-    
+  
 }
 .footer{
     background-color: #1C4E8E;
@@ -320,8 +455,8 @@ footer{
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-    position: absolute;
     bottom: 0;
+    position: relative;
   }
   .coll1{
     background-color: #1C4E8E;
