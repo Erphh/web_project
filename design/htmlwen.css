@@ -11,7 +11,7 @@ html{
   max-width: 100%;}
 
 body{
-  background-color: rgba(16, 19, 22, 10%);
+  
 }
 li,a{
   font-family: "Montserrat", sans-serif;
@@ -22,13 +22,14 @@ li,a{
   
 }
 header{
+  background-color: rgba(16, 19, 22, 10%);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: -40px;
   flex-wrap: wrap;
   padding: 30px 10%;
-  width: 100%;
+  width: fit-content;
 }
 .all{
   padding-left: 20px;
@@ -177,9 +178,12 @@ img.arrow{
   margin-left: 5px;
 }
 .home{
+  width: 100%;
+  height: 800px;
 display: flex;
 justify-content: flex-start;
 padding: 30px 10%;
+background-color: rgba(16, 19, 22, 10%);
 }
 .left-home{
   position: relative;
