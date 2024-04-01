@@ -244,3 +244,125 @@ footer{
   background-color: #1C4E8E;
   color: white;
 }
+.col2 a {
+  list-style-type: none;
+  background-color: #1C4E8E;
+  color: white;
+}
+.col3 a {
+  list-style-type: none;
+  background-color: #1C4E8E;
+  color: white;
+}
+.col4{
+  background-color: #1C4E8E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col4 li {
+  display: flex;
+  justify-content: left;
+  padding-bottom: 25px;
+  list-style-type: none;
+  background-color: #1C4E8E;
+  color: white;
+}
+.col4 b {
+  list-style-type: none;
+  background-color: #1C4E8E;
+  color: white;
+}
+.col4 img{
+  background-color: rgba(165, 169, 172, 0%);;
+  padding-right: 10px;
+}
+.emailfield{
+  height: 56px;
+  width: 322px;
+  display: flex;
+  padding-left: 10px;
+  background-color: rgba(165, 169, 172, 10%);
+  border-radius: 10px;
+  
+  
+}
+.rightar{
+  background-color: rgba(165, 169, 172, 10%);
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.emailfield p{
+  padding-top: 20px;
+  justify-content: center;
+  background-color:transparent;
+  color: white;
+}
+.line{
+  width: 1200px;
+    height: 46px;
+    background-color: rgba(165, 169, 172, 20%);
+    position: absolute;
+    bottom: 0;
+    margin-left:6%;
+    margin-bottom: 5px;
+    
+}
+.footer{
+    background-color: #1C4E8E;
+    width: 1440px;
+    height: 50px;
+    display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+    position: absolute;
+    
+    bottom: 0;
+  }
+  .coll1{
+    background-color: #1C4E8E;
+    
+  }
+  .coll1 li{
+    list-style-type: none;
+    margin-left: 5px;
+    display: inline-block;
+    flex-direction: row;
+    background-color: #1C4E8E;
+  }
+  .coll1 a{
+    background-color: #1C4E8E;
+  }
+  .coll1 img{
+    border-radius: 2.4px;
+  }
+  .coll2{
+    background-color: #1C4E8E;
+  }
+  .coll2 li{
+    background-color: #1C4E8E;
+    color: #fff;
+    padding-right: 110px;
+  }
+  
+  .coll3{
+    background-color: #1C4E8E;
+  }
+  
+  .coll3 li{
+    list-style-type: none;
+    padding-left: 5px;
+    display: inline-block;
+    flex-direction: row;
+    background-color: #1C4E8E;
+  }
+  .coll3 a{
+    background-color: #1C4E8E;
+    
+  }
+  .coll3 img{
+    background-color: #1C4E8E;
+  }
