@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   background-color: transparent;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 html{
   width: 100%;
@@ -519,16 +519,24 @@ footer{
   }
   .bnctg {
     margin-left: auto;
+    background-color: transparent;
+    width: 50px;
+    margin-bottom: 1%;
   }
   .nctg {
     margin-left: 1%;
     margin-right: 5%;
+    background-color: transparent;
+    width: 50px;
+    margin-bottom: 1%;
   }
   .ctg-row2{
     margin-top: 30px;
-    margin-left:-25px ;
+    margin-left:-40px ;
     display: flex;
     flex: 1 0 100%; 
+    
+   
   }
   .phone{
     position: absolute;
@@ -559,7 +567,7 @@ footer{
   .ctg >p{
     font-weight: bold;
     font-size: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Montserrat;
   }
   .discount{
     width: 100%;
@@ -567,7 +575,7 @@ footer{
   display: flex;
   justify-content: flex-start;
   padding: 5% 8%;
-
+  margin-bottom: 10%;
   }
   .left-discount{
     background-color: #E7E9E9;
@@ -664,8 +672,7 @@ footer{
   }
   .best{
     display: flex;
-    border: 1px solid black;
-    margin-top: 10%;
+    margin-top: 5%;
     padding-left: 8%;
     padding-right: 38%;
   }
@@ -673,9 +680,16 @@ footer{
     font-size: 30px;
     font-weight: bold;
   }
+  .clicked{
+    margin-left: auto;
+   }
+  .best a:active {
+    color: #1C4E8E;
+    text-decoration: underline;
+   }
   .best a{
     width: fit-content;
-   color: black;
+   color: rgb(0, 0, 0);
    font-size: 20px;
    background-color: transparent;
    cursor: pointer;
@@ -683,11 +697,7 @@ footer{
    margin-right: 20px;
    padding-top: 5px;
   }
-   .clicked{
-    color: brown;
-    text-decoration: underline;
-    margin-left: auto;
-   }
+   
    .best-seller{
     background-color: #E7E9E9;
     display: flex;
@@ -708,6 +718,7 @@ footer{
    }
    .best-seller h2{
     position: absolute;
+    font-weight: bold;
     top: 5%;
     margin-left: -25%;
     font-size: 30px;
@@ -718,6 +729,9 @@ footer{
     font-size: 18px;
     top: 18%;
     margin-left: -25%;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: Montserrat;
   }
   .best-seller img{
     position: absolute;
@@ -745,7 +759,7 @@ footer{
   .cadr img:nth-child(1){
     position: absolute;
     top: 0%;
-    margin-left: -5%;
+    margin-left: 7%;
   }
   .cadr h4{
     position: absolute;
@@ -777,4 +791,106 @@ footer{
     padding-bottom: 30%;
     margin-right: 10%;
    
+  }
+  .yaro{
+    position: relative;
+    display:grid;
+  }
+  .yaro img:nth-child(1){
+    padding-top: 3%;
+  }
+  .yaro h2{
+    position: absolute;
+    top: 35%;
+    margin-left: 7%;
+    color: white;
+    font-size: 40px;
+    width: 400px;
+    line-height: 1.4;
+  }
+  .yaro p{
+    position: absolute;
+    top: 56%;
+    margin-left: 7%;
+    color: white;
+  }
+  .yaro button{
+    position: absolute;
+    top: 65%;
+    margin-left: 7%;
+    width: max-content;
+  }
+  .top-seller{
+    background-color: #E7E9E9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    display:grid;
+    width: max-content;
+    height: max-content;
+    padding-left: 8%;
+    padding-top: 5%;
+    height: 720px;
+    width:380px;
+    margin-right: 2%;
+    margin-left: 8%;
+
+   }
+   .top-seller h1{
+    position: absolute;
+    top: 5%;
+    margin-left: -25%;
+    font-size: 30px;
+    width: 240px;
+    font-weight: bold;
+  }
+  .top-seller p{
+    position: absolute;
+    font-size: 18px;
+    top: 18%;
+    margin-left: -25%;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: Montserrat;
+  }
+  .top-seller img{
+    position: absolute;
+    font-size: 18px;
+    top: 20%;
+    margin-left: -32%;
+  }
+  .support{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 3%;
+    margin-left:6% ;
+    margin-bottom: 3%;
+  }
+  .support ul{
+    width: max-content;
+    margin-right: 3%;
+  }
+  .support li{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    margin-bottom: 7%;
+  }
+  .support h2{
+    font-family: Montserrat;
+    font-size: 18px;
+  }
+  .support p{
+    font-family: Montserrat;
+    font-size: 16px;
+    margin-top: -1%;
+    
+  }
+  .dar{
+    margin-top: 5px;
   }
