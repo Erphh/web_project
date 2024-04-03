@@ -520,7 +520,7 @@ footer{
 
   .login button :nth-child(1){
     position: absolute;
-    top: -8%;
+    top: -15%;
     right: 0%;
   }
   .login button:nth-child(1){
@@ -540,7 +540,7 @@ footer{
   #pls{
     position: absolute;
     margin-left: 7%;
-  top: 9%;
+  top: 15%;
   font-size: 16px;
   color:#A5A9AC ;
   }
