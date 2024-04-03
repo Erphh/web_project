@@ -629,6 +629,11 @@ footer{
       outline: none;
       accent-color: #1C4E8E;
     }
+    .login a{
+      padding-top: 15px;
+      padding-right: 43%;
+      color: white; 
+    }
     .loginn{
       position: absolute;
       color: white;
