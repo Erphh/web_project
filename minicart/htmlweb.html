@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1440px, initial-scale=1.0">
+  <link rel="stylesheet" href="minicart.css">
+  <title>navbar</title>
+</head>
+<body>
+  <header>
+    <img class="logo" src="..\pics\Group 427319094.svg" alt="logo">
+    <select class="all" name="All" id="all">
+      <option value="All">All</option>
+    </select>
+    <div class="search-bar">
+      <img class="searchlogo" src="..\pics\Union.svg" alt="search button">
+      <input type="search" placeholder="search">
+    </div>
+    <div class="search-button">
+      <button type="submit"> Search</button>
+    </div>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#"><img src="..\pics\search 02.svg" alt="search"></a></li>
+        <li><a href="#"><img src="..\pics\Vector.svg" alt=""></a></li>
+        <li><a href="#">
+          <div class="cart-icon">
+            <img src="..\pics\search 4.svg" alt="cart">
+            <span class="cart-count">2</span> </div>
+        </a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#"><button>Login</button></a>
+    <div class="row2">
+      <ul class="nav__links">
+        <li><div class="vertical-menu">
+          <img class="menu" src="..\pics\menu-line-horizontal.svg" alt="">
+          <a href="#" class="active">All Categories</a>
+          <img class="arrow" src="..\pics\Vector (Stroke).svg" alt="">
+        </div></li>
+        <li>Home</li>
+        <li><div class="menu"><a href="#" class="active">Shop</a>
+          <img class="arrow" src="..\pics\Vector (Stroke).svg" alt=""></div></li>
+        <li>About Us</li>
+        <li>Blog</li>
+        <li>Contact Us</li>
+    </div>
+  </header>
+  <div class="breadcrumb">
+    <a>Home</a> >
+    <a>Shop</a> >
+    <a>Apple iPhone 14 Pro</a> 
+  </div>
+  <div class="upp">
+    <div class="leftup">
+    <ul>
+      <li><div class="big"><img class="" src="..\pics\image 16.svg" alt="wwwwwwwwww"></div></li>
+      <li>
+        <div class="small" id="sm"><img class="" src="..\pics\image 117.svg" alt="wwwwwwwwww"></div>
+        <div class="small"><img class="" src="..\pics\image 117.svg" alt="wwwwwwwwww"></div>
+        <div class="small"><img class="" src="..\pics\image 117.svg" alt="wwwwwwwwww"></div>
+        <div class="small"><img class="" src="..\pics\image 117.svg" alt="wwwwwwwwww"></div>
+      </li>
+    </ul>
+  </div>
+    <div class="rightup">
+      <ul>
+        <li>
+          <h1>Apple iPhone 14 Pro</h1>
+          <img class="ins" src="..\pics\ins.svg" alt="wwwwwwwwww">
+        </li>
+        <li>
+          <img class="" src="..\pics\str.svg" alt="wwwwwwwwww">
+          <p id="re"> 5.0 (121 Reviews)</p>
+        </li>
+        <li id="price">
+          <p>$1999.00</p>
+        </li>
+        <li><p id="des">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+           The point of using Lorem Ipsum is that it has a more-or-less normal distribution.</p></li>
+        <li><p id="color"> Color</p></li>
+        <li class="vizh">
+          <div id="gray"></div>
+          <div id="blue"></div>
+          <div id="black"></div>
+          <div id="purple"></div>
+        </li>
+        <li >
+          <button id="minus">
+            -
+          </button>
+          <input id="quanity"  maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text" value="1" name="code">
+          <button id="plus">
+            +
+          </button>
+          <button class="cart">
+            Add to Cart
+          </button>
+          <button class="fav">
+            <img class="" src="..\pics\fav.svg" alt="wwwwwwwwww">
+          </button>
+        </li>
+        <li><p id="share"> Share</p></li>
+        <li>
+          <img class="med" src="..\pics\fac.svg" alt="wwwwwwwwww">
+          <img class="med" src="..\pics\twi.svg" alt="wwwwwwwwww">
+          <img class="" src="..\pics\inss.svg" alt="wwwwwwwwww">
+        </li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="mini-cart">
+    <p class="tedad">You have <b>2 items</b> in your cart</p>
+    <ul class="carts">
+      <ul>
+        <li class="ph">
+          <img src="..\pics\image 166.svg" alt="">
+        </li>
+      </ul>
+      <ul>
+        <li>Apple iPhone 14 Pro</li>
+        <li><b>$1999.00</b></li>
+        <li>QTY: 1</li>
+      </ul>
+      <button class="delete">
+        <img src="..\pics\trash.svg" alt="">
+      </button>
+    </ul>
+
+    <ul class="carts">
+      <ul>
+        <li class="ph">
+          <img src="..\pics\image 166.svg" alt="">
+        </li>
+       
+      </ul>
+      <ul>
+        <li>Apple iPhone 14 Pro</li>
+        <li><b>$1999.00</b></li>
+        <li>QTY: 1</li>
+      </ul>
+      <button class="delete">
+        <img src="..\pics\trash.svg" alt="">
+      </button>
+    </ul>
+    <div class="bottom">
+      <b>Subtotal</b> <b id="pric">$2249.00</b>
+    </div>
+    <button class="view">
+      View Cart
+    </button>
+    <button class="check">
+      Checkout
+    </button>
+  </div>
+
+
+</body>
+</html>
