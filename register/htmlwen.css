@@ -34,7 +34,7 @@ header{
 .all{
   padding-left: 20px;
   appearance: none;
-  background: url('Vector (Stroke)1.svg') no-repeat right;
+  background: url('..\pics\Vector (Stroke)1.svg') no-repeat right;
   background-color: transparent;
   background-position: 55px;;
   height: 50px;
@@ -164,7 +164,7 @@ transition: all 0.3s ease 0s;
 img.arrow{
   background-color:  rgba(165, 169, 172, 0%);
   margin-left:auto ;
-  margin-right: 20px;
+  
  }
  img.menu{
   background-color:  rgba(165, 169, 172, 0%);
