@@ -506,7 +506,7 @@ footer{
   .coll3 img{
     background-color: #1C4E8E;
   }
-  .login{
+  .registered{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -518,12 +518,12 @@ footer{
     margin-top: -34%;
   }
 
-  .login button :nth-child(1){
+  .registered button :nth-child(1){
     position: absolute;
     top: -8%;
     right: 0%;
   }
-  .login button:nth-child(1){
+  .registered button:nth-child(1){
     color: transparent;
     background-color: transparent;
     border: none;
@@ -544,14 +544,14 @@ footer{
   font-size: 16px;
   color:#A5A9AC ;
   }
-  .na{
+  .naa{
     position: absolute;
     margin-left: 3%;
   top: 15%;
   font-size: 12px;
   color:black ;
   }
-  #nam{
+  #nama{
     position: absolute;
     color: #101316;
     margin-left: 2%;
@@ -566,14 +566,14 @@ footer{
     height: 8%;
     font-family: Montserrat;
   }
-  .ea{
+  .eaa{
     position: absolute;
     margin-left: 3%;
   top: 27%;
   font-size: 12px;
   color:black ;
   }
-  #eai{
+  #eaia{
   position: absolute;
   color: #101316;
   margin-left: 2%;
@@ -588,14 +588,14 @@ footer{
   height: 8%;
   font-family: Montserrat;
   }
-  .pa{
+  .paa{
     position: absolute;
     margin-left: 3%;
   top: 39%;
   font-size: 12px;
   color:black ;
   }
-  .pas{
+  .pasa{
     position: absolute;
     color: #101316;
     margin-left: 2%;
@@ -610,7 +610,7 @@ footer{
     height: 8%;
     font-family: Montserrat;
     }
-    #rem{
+    #rema{
       position: absolute;
       color: #101316;
       margin-left: 10%;
@@ -619,7 +619,7 @@ footer{
       
       font-family: Montserrat,sans-serif;
     }
-    .check{
+    .checka{
       position: absolute;
       margin-left: 3%;
       top: 51%;
@@ -629,12 +629,12 @@ footer{
       outline: none;
       accent-color: #1C4E8E;
     }
-    .login a{
+    .registered a{
       padding-top: 15px;
       padding-right: 43%;
       color: white; 
     }
-    .loginn{
+    .regi{
       position: absolute;
       color: white;
       top: 60%;

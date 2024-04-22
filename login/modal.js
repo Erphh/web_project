@@ -1,14 +1,16 @@
+function openPopup() {
+  document.getElementById("login").style.display = "flex";
+}
 
-const modal = document.querySelector("#modal");
-const openModal = document.querySelector(".open-button");
-const closeModal = document.querySelector(".close-button");
+function closePopup() {
+  document.getElementById("login").style.display = "none";
+}
 
+function openNestedPopup() {
+  document.getElementById("registered").style.display = "flex";
+  document.getElementById("login").style.display = "none";
+}
 
-openModal.addEventListener("click", () => {
-modal.showModal();
-});
-
-closeModal.addEventListener("click", () => {
-modal.close();
-});
-  
+function closeNestedPopup() {
+  document.getElementById("registered").style.display = "none";
+}

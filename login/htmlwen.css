@@ -509,13 +509,15 @@ footer{
     position: absolute;
   }
   .login{
-    display: flex;
     flex-direction: column;
     position: absolute;
     width: 420px;
     height: 580px;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
+    display: none;
+    margin-top: -50%;
+    margin-left: 40%;
     
   }
 
@@ -677,3 +679,177 @@ margin-top: 15%;
  margin-left: 30%;
  border: none;
     }
+    .registered{
+      flex-direction: column;
+      position: absolute;
+      width: 420px;
+      height: 580px;
+      background-color: rgb(241, 241, 241);
+      border-radius: 16px;
+      margin-top: -50%;
+      margin-left: 40%;
+    }
+  #registered{
+    display: none;
+  }
+    .registered button :nth-child(1){
+      position: absolute;
+      top: -8%;
+      right: 0%;
+    }
+    .registered button:nth-child(1){
+      color: transparent;
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .welcom{
+      position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 2%;
+    top: 3%;
+    }
+    #pls{
+      position: absolute;
+      margin-left: 2%;
+    top: 9%;
+    font-size: 16px;
+    color:#A5A9AC ;
+    }
+    .naa{
+      position: absolute;
+      margin-left: 3%;
+    top: 15%;
+    font-size: 12px;
+    color:black ;
+    }
+    #nama{
+      position: absolute;
+      color: #101316;
+      margin-left: 2%;
+      top: 18%;
+      font-size: 16px;
+      padding-left: 3%;
+      background-color: transparent;
+      border-color: #1C4E8E;
+      border: 1px solid #1C4E8E ;
+      border-radius: 10px;
+      width: 92%;
+      height: 8%;
+      font-family: Montserrat;
+    }
+    .eaa{
+      position: absolute;
+      margin-left: 3%;
+    top: 27%;
+    font-size: 12px;
+    color:black ;
+    }
+    #eaia{
+    position: absolute;
+    color: #101316;
+    margin-left: 2%;
+    top: 30%;
+    font-size: 16px;
+    padding-left: 3%;
+    background-color: transparent;
+    border-color: #1C4E8E;
+    border: 1px solid #1C4E8E ;
+    border-radius: 10px;
+    width: 92%;
+    height: 8%;
+    font-family: Montserrat;
+    }
+    .paa{
+      position: absolute;
+      margin-left: 3%;
+    top: 39%;
+    font-size: 12px;
+    color:black ;
+    }
+    .pasa{
+      position: absolute;
+      color: #101316;
+      margin-left: 2%;
+      top: 42%;
+      font-size: 16px;
+      padding-left: 3%;
+      background-color: transparent;
+      border-color: #1C4E8E;
+      border: 1px solid #1C4E8E ;
+      border-radius: 10px;
+      width: 92%;
+      height: 8%;
+      font-family: Montserrat;
+      }
+      #rema{
+        position: absolute;
+        color: #101316;
+        margin-left: 10%;
+        top: 51.3%;
+        font-size: 14px;
+        
+        font-family: Montserrat,sans-serif;
+      }
+      .checka{
+        position: absolute;
+        margin-left: 3%;
+        top: 51%;
+        background-color: #1C4E8E;
+        width: 20px;
+        height: 20px;
+        outline: none;
+        accent-color: #1C4E8E;
+      }
+      .registered a{
+        padding-top: 15px;
+        padding-right: 43%;
+        color: white; 
+      }
+      .regi{
+        position: absolute;
+        color: white;
+        top: 60%;
+        font-size: 14px;
+        width: 94%;
+        margin-left: 3%;
+        height: 7%;
+        font-family: Montserrat,sans-serif; 
+        cursor: pointer;
+        background-color: #1C4E8E;
+        border-radius: 10px;
+        border: none;
+      }
+      #Register{
+        position: absolute;
+        color: #1C4E8E;
+        top: 60%;
+        font-size: 14px;
+        width: 94%;
+        margin-left: 3%;
+        height: 7%;
+        font-family: Montserrat,sans-serif; 
+        cursor: pointer;
+        background-color:transparent;
+        border-radius: 10px;
+        border:1px solid #1C4E8E;
+      }
+      .org{
+        position: absolute;
+        top: 70%;
+        margin-left: 4.5%;
+      }
+      .google{
+        cursor: pointer;
+        position: absolute;
+        top: 75%;
+        margin-left: 4.5%;
+      }
+      .apple{
+        cursor: pointer;
+        position: absolute;
+        top: 86%;
+        margin-left: 4.5%;
+      }

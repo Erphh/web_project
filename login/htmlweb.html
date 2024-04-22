@@ -31,7 +31,7 @@
         </a></li>
       </ul>
     </nav>
-    <button class="button open-button">login</button>
+    <button onclick="openPopup()">login</button>
     <div class="row2">
       <ul class="nav__links">
         <li><div class="vertical-menu">
@@ -77,9 +77,9 @@
             <span class="c1"><img src="..\pics\c1.svg" alt=""></span> </div>
           </div>
   </div>
-  <dialog class="modal" id="modal">
-    <div class="login">
-      <button class="button close-button"><img src="\Users\Erfan\Desktop\web\pics\Button.svg" alt=""></button>
+  
+    <div class="login" id="login">
+      <button class="button close-button" onclick="closePopup()"><img src="\Users\Erfan\Desktop\web\pics\Button.svg" alt=""></button>
       <p class="welcom">Welcome 👋</p>
       <p  id="pls">Please login here</p>
     
@@ -93,13 +93,12 @@
       <dialog>
       </dialog>
       <button class="loginn">Login</button>
-      <button class="button open-button" id="Register">
-        <a href="\Users\Erfan\Desktop\web\register\htmlweb.html">Register</a></button>
+      <button onclick="openNestedPopup()" id="Register">
+        Register</button>
       <img class="org" src="\Users\Erfan\Desktop\web\pics\orl.svg" alt="">
         <a class="google" href="#"><img  src="\Users\Erfan\Desktop\web\pics\google.svg" alt=""></a>
         <a class="apple" href=""><img  src="\Users\Erfan\Desktop\web\pics\apple.svg" alt=""></a>
       </div>
-  </dialog>
   <dialog class="modall" id="modall">
     <div class="login">
       <button class="button close-button"><img src="\Users\Erfan\Desktop\web\pics\Button.svg" alt=""></button>
@@ -123,8 +122,27 @@
         <a class="apple" href=""><img  src="\Users\Erfan\Desktop\web\pics\apple.svg" alt=""></a>
       </div>
   </dialog>
+  <div class="registered" id="registered">
+    <button class="button close-button" onclick="closeNestedPopup()"><img src="\Users\Erfan\Desktop\web\pics\Button.svg" alt=""></button>
+    <p class="welcom">Create New Account</p>
+    <p  id="pls">Please enter details</p>
 
-  
+   <label class="naa" id="ea" for="email-address">Name</label>
+      <input id="nama" type="text" value="Kristin Watson" name="email-address">
+      <label class="eaa" id="ea" for="email-address">Email Address</label>
+      <input id="eaia" type="text" value="kristin.watson@example.com" name="email-address">
+    
+    <label class="paa" for="Password">Password</label>
+    <input class="pasa" type="password" value="*****************" name="Password">
+   
+    <input type="checkbox" class="checka" value=""> <p id="rema">I agree to the Terms & Conditions</p>
+    <button class="regi"><a href="\Users\Erfan\Desktop\web\otp\htmlweb.html">Register</a>
+      </button>
+    <img class="org" src="\Users\Erfan\Desktop\web\pics\orl.svg" alt="">
+      <a class="google" href="#"><img  src="\Users\Erfan\Desktop\web\pics\google.svg" alt=""></a>
+      <a class="apple" href=""><img  src="\Users\Erfan\Desktop\web\pics\apple.svg" alt=""></a>
+    </div>
+
   <footer>
     <ul class="col1">
     <li><img class="logofooter" src="..\pics\LogoText.svg" alt="wwwwwwwwww"></li>
