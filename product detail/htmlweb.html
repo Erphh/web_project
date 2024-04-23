@@ -24,11 +24,11 @@
       <ul class="nav__links">
         <li><a href="#"><img src="..\pics\search 02.svg" alt="search"></a></li>
         <li><a href="#"><img src="..\pics\Vector.svg" alt=""></a></li>
-        <li><a href="#">
-          <div class="cart-icon">
+        <li>
+          <div class="cart-icon" onclick="minicart()" >
             <img src="..\pics\search 4.svg" alt="cart">
-            <span class="cart-count">2</span> </div>
-        </a></li>
+            <span class="cart-count" id="cart-countt">2</span> </div>
+        </li>
       </ul>
     </nav>
     <a class="cta" href="#"><button>Login</button></a>
@@ -75,16 +75,16 @@
           <p id="re"> 5.0 (121 Reviews)</p>
         </li>
         <li id="price">
-          <p>$1999.00</p>
+          <p id="pricee">$1999.00</p>
         </li>
         <li><p id="des">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
            The point of using Lorem Ipsum is that it has a more-or-less normal distribution.</p></li>
         <li><p id="color"> Color</p></li>
         <li class="vizh">
-          <div id="gray"></div>
-          <div id="blue"></div>
-          <div id="black"></div>
-          <div id="purple"></div>
+          <div id="gray" onclick="changep()"></div>
+          <div id="blue" onclick="changep()"></div>
+          <div id="black" onclick="changep()"></div>
+          <div id="purple" onclick="changep()"></div>
         </li>
         <li >
           <button id="minus">
@@ -94,7 +94,7 @@
           <button id="plus">
             +
           </button>
-          <button class="cart">
+          <button class="cart" onclick="addtocart()">
             Add to Cart
           </button>
           <button class="fav">
@@ -112,15 +112,121 @@
   </div>
   <div class="info">
     <ul>
-      <li id="desc"> <a>Descriptions</a></li>
-      <li id="add"><a href="\Users\Erfan\Desktop\web\product detail\Additional Information.html">Additional Information</a> </li>
-      <li id="rev"><a href="\Users\Erfan\Desktop\web\product detail\review.html">Reviews</a></li>
+      <li id="desc" onclick="opendes()"> <a id="desc1">Descriptions</a></li>
+      <li id="add" onclick="openadd()"><a id="add1">Additional Information</a> </li>
+      <li id="rev" onclick="openrev()"><a id="rev1">Reviews</a></li>
     </ul>
   </div>
   <p id="details">
     t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
     <br> <br>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
   </p>
+  <table id="addd">
+    <tbody>
+      <tr>
+      <td class="spec">Brand</td>
+      <td>Apple</td>
+    </tr>
+    <tr>
+      <td class="spec">Item Height</td>
+      <td>65 CM</td>
+    </tr>
+    <tr>
+      <td class="spec">Item Width</td>
+      <td>31.4 CM</td>
+    </tr>
+    <tr>
+      <td class="spec">Screen Size</td>
+      <td>6.5 Inch</td>
+    </tr>
+    <tr>
+      <td class="spec">Model Number</td>
+      <td>MF841HN/A</td>
+    </tr>
+    <tr>
+      <td class="spec">RAM Size</td>
+      <td>6 GB</td>
+    </tr>
+    <tr>
+      <td class="spec">Operating System</td>
+      <td>ios 17</td>
+    </tr>
+    </tbody>
+  </table>
+  <div id="rew">
+    <p class="Customer">Customer Reviews</p>
+    <div class="crev">
+    <p class="namer">Mark Williams</p>
+    <img class="stars" src="..\pics\str.svg" alt="">
+    <img class="prof" src="..\pics\prof1.svg" alt="">
+    <p class="titler">Excellent Product, I Love It 😍</p>
+    <p class="bodyr">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+       as opposed to using 'Content here, content here', making it look like readable English.</p>
+    <span class="revs">
+      <p class="r1">Review by</p>
+      <p class="r2">Electro</p>
+      <p class="r3">Posted on</p>
+      <p class="r4">Sep 08, 2023</p>
+    </span>
+  </div>
+  <div class="crev">
+    <p class="namer">Alexa Johnson</p>
+    <img class="stars" src="..\pics\str.svg" alt="">
+    <img class="prof" src="..\pics\prof2.svg" alt="">
+    <p class="titler">My Brother is very much happy with this iPhone</p>
+    <p class="bodyr">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+       as opposed to using 'Content here, content here', making it look like readable English.</p>
+    <span class="revs">
+      <p class="r1">Review by</p>
+      <p class="r2">Electro</p>
+      <p class="r3">Posted on</p>
+      <p class="r4">Sep 08, 2023</p>
+    </span>
+  </div>
+  <p class="addrev">Add your Review</p>
+  <div class="writerev">
+    <p class="rating">Your Rating</p>
+    <div >
+      <ul class="starss">
+        <li>
+          <img src="../pics/Star 2.svg" alt="" onmouseover="this.src='../pics/Star 2h.svg'" onmouseleave="this.src='../pics/Star 2.svg'" onclick="console.log(1)">
+        </li>
+        <li>
+          <img src="..\pics\2star.svg" alt="" onmouseover="this.src='../pics/2starh.svg'" onmouseleave="this.src='../pics/2star.svg'" onclick="console.log(2)">
+        </li>
+        <li>
+          <img src="..\pics\3star.svg" alt="" onmouseover="this.src='../pics/3starh.svg'" onmouseleave="this.src='../pics/3star.svg'" onclick="console.log(3)">
+        </li>
+        <li>
+          <img src="..\pics\4star.svg" alt="" onmouseover="this.src='../pics/4starh.svg'" onmouseleave="this.src='../pics/4star.svg'" onclick="console.log(4)">
+        </li>
+        <li id="final">
+          <img  src="..\pics\5star.svg" alt="" onmouseover="this.src='../pics/5starh.svg'" onmouseleave="this.src='../pics/5star.svg'" onclick="console.log(5)">
+        </li>
+      </ul>
+    </div>
+    <ul class="texts">
+      <li><label  id="ea" for="name">Name</label></li>
+      <li class="na"><input id="nam" type="text" value="Enter Your Name" name="name"></li>
+    </ul>
+      <ul class="texts">
+      <li><label class="ea" id="ea" for="email-address">Email Address</label></li>
+      <li> <input id="nam" type="email" value="Enter Your Email" name="email-address"></li>
+    </ul>
+    <ul class="texts">
+      <li><label class="pa" for="review">Your Review</label></li>
+      <li><input class="pas" type="text" value="Enter Your Review" name="review"></li>
+    </ul>
+      
+      
+      
+     
+      
+      
+      <button class="loginn"
+      type="submit">Submit</button>
+  </div>
+  </div>
   <p id="rel">
     Related Products
   </p>
@@ -157,6 +263,51 @@
       <li><img src="..\pics\str.svg" alt=""></li>
       <li>$250.00</li>
     </ul>
+  </div>
+  <div class="mini-cart" id="mini">
+    <p class="tedad">You have <b>2 items</b> in your cart</p>
+    <ul class="carts">
+      <ul>
+        <li class="ph">
+          <img src="..\pics\image 166.svg" alt="">
+        </li>
+      </ul>
+      <ul>
+        <li>Apple iPhone 14 Pro</li>
+        <li><b>$1999.00</b></li>
+        <li>QTY: 1</li>
+      </ul>
+      <button id="delete" onclick="deletecart()">
+        <img src="..\pics\trash.svg" alt="">
+      </button>
+    </ul>
+
+    <ul class="carts">
+      <ul>
+        <li class="ph">
+          <img src="..\pics\image 166.svg" alt="">
+        </li>
+       
+      </ul>
+      <ul>
+        <li>Apple iPhone 12 Pro</li>
+        <li><b>$1099.00</b></li>
+        <li>QTY: 1</li>
+      </ul>
+      <button id="delete" onclick="deletecart()">
+        <img src="..\pics\trash.svg" alt="">
+      </button>
+    </ul>
+    <div class="bottom">
+      <b>Subtotal</b> <b id="pric">$2249.00</b>
+    </div>
+    <button class="view">
+      View Cart
+    </button>
+    <button class="check">
+      Checkout
+    </button>
+  </div>
   </div>
   <footer>
     <ul class="col1">
@@ -220,6 +371,6 @@
       <li><a href="#" class="active"><img src="..\pics\tw.svg" alt=""></a></li>
     </ul>
   </div>
-
+  <script  src="\Users\Erfan\Desktop\web\product detail\modal.js"></script>
 </body>
 </html>
