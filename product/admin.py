@@ -1,12 +1,22 @@
-# shop/admin.py
 from django.contrib import admin
-from mptt.admin import MPTTModelAdmin
-from .models import Category, Product, DiscountCode, Cart, CartItem, ProductImage, ProductVideo
+from .models import Category, Product, ProductImage, ProductVideo,DiscountCode,Cart
+# Register your models here.
 
-admin.site.register(Category, MPTTModelAdmin)
+
+class ProductImageInline(admin.TabularInline):
+    model = ProductImage
+    extra = 1
+
+class ProductVideoInline(admin.TabularInline):
+    model = ProductVideo
+    extra = 1
+
+class ProductAdmin(admin.ModelAdmin):
+    inlines = [ProductImageInline, ProductVideoInline]
+
+admin.site.register(Category)
 admin.site.register(Product)
-admin.site.register(DiscountCode)
-admin.site.register(Cart)
-admin.site.register(CartItem)
 admin.site.register(ProductImage)
 admin.site.register(ProductVideo)
+admin.site.register(DiscountCode)
+admin.site.register(Cart)

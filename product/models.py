@@ -1,6 +1,7 @@
-# shop/models.py
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
+from loginpage.models import Account
+
 
 class Category(MPTTModel):
     name = models.CharField(max_length=255)
@@ -13,14 +14,18 @@ class Category(MPTTModel):
         return self.name
 
     def save(self, *args, **kwargs):
-        if self.get_level() > 5:
+        level = self.get_level()
+        if level is None:
+            level = 0
+        if level > 5:
             raise ValueError("Maximum depth of 5 exceeded")
         super().save(*args, **kwargs)
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
+    details = models.TextField()
     description = models.TextField()
-    category = TreeForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+    category = TreeForeignKey(Category, related_name='loginpage', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
@@ -28,18 +33,17 @@ class Product(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='products/images/')
+    image = models.ImageField(upload_to='loginpage/images/')
 
     def __str__(self):
         return f'Image for {self.product.name}'
 
 class ProductVideo(models.Model):
     product = models.ForeignKey(Product, related_name='videos', on_delete=models.CASCADE)
-    video = models.FileField(upload_to='products/videos/')
+    video = models.FileField(upload_to='loginpage/videos/')
 
     def __str__(self):
         return f'Video for {self.product.name}'
-
 class DiscountCode(models.Model):
     code = models.CharField(max_length=50)
     percentage = models.FloatField(blank=True, null=True)
@@ -52,17 +56,5 @@ class DiscountCode(models.Model):
         return self.code
 
 class Cart(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    products = models.ManyToManyField(Product, through='CartItem')
-
-    def __str__(self):
-        return f'Cart {self.id}'
-
-class CartItem(models.Model):
-    cart = models.ForeignKey(Cart, related_name='items', on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField()
-
-    def __str__(self):
-        return f'{self.quantity} of {self.product.name}'
+    user = models.OneToOneField(Account, on_delete=models.CASCADE)
+    products = models.ManyToManyField(Product)

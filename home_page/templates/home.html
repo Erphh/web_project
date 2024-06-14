@@ -1,0 +1,425 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1440px, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'home.css'%}">
+  <title>home-page</title>
+</head>
+<body>
+  <header>
+    <img class="logo" src="..\pics\Group 427319094.svg" alt="logo">
+    <select class="all" name="All" id="all">
+      <option value="All">All</option>
+    </select>
+    <div class="search-bar">
+      <img class="searchlogo" src="..\pics\Union.svg" alt="search button">
+      <input type="search" placeholder="search">
+    </div>
+    <div class="search-button">
+      <button type="submit"> Search</button>
+    </div>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#"><img src="..\pics\search 02.svg" alt="search"></a></li>
+        <li><a href="#"><img src="..\pics\Vector.svg" alt=""></a></li>
+        <li><a href="#">
+          <div class="cart-icon">
+            <img src="..\pics\search 4.svg" alt="cart">
+            <span class="cart-count">2</span> </div>
+        </a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#"><button>Login</button></a>
+    <div class="row2">
+      <ul class="nav__links">
+        <li><div class="vertical-menu">
+          <img class="menu" src="..\pics\menu-line-horizontal.svg" alt="">
+          <a href="#" class="active">All Categories</a>
+          <img class="arrow" src="..\pics\Vector (Stroke).svg" alt="">
+        </div></li>
+        <li>Home</li>
+        <li><div class="menu"><a href="#" class="active">Shop</a>
+          <img class="arrow" src="..\pics\Vector (Stroke).svg" alt=""></div></li>
+        <li>About Us</li>
+        <li>Blog</li>
+        <li>Contact Us</li>
+    </div>
+  </header>
+  <div class="home">
+    <div class="left-home">
+      <div class="circles">
+        <img class="cc3" src="..\pics\cc3.svg" alt="cart">
+        <img class="cc1"src="..\pics\cc1.svg" alt="cart">
+        <img class="cc2"src="..\pics\cc2.svg" alt="cart">
+        <img class="cc4"src="..\pics\cc1.svg" alt="cart">
+      </div>
+      <h1 class="main-h1">
+        Great Sound 
+        With Solo 
+        Headphone
+      </h1>
+      <p class="main-p">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+      <button><div class="shop-now">Shop Now
+        <img src="..\pics\arrow-right.svg" alt=""></div>
+      </button>
+      <div class="triangles">
+        <img class="tri1" src="..\pics\tri.svg" alt="cart">
+        <img class="tri2"src="..\pics\tri.svg" alt="cart">
+        <img class="tri3"src="..\pics\tri.svg" alt="cart">
+      </div>
+    </div>
+    <div class="right-home"> <div class="cart-icon">
+            <img src="..\pics\Ellipse 1200.svg" alt="cart">
+            {% for banner in banners %}
+                <span class="young"><img src="{{ banner }}" alt="" style="width: 300px; height: auto;"></span>
+            {% endfor %}
+            <span class="c1"><img src="..\pics\c1.svg" alt=""></span> </div>
+          </div>
+  </div>
+  <div class="ctg">
+    <p>Shop by Catrgories</p>
+    <button class="bnctg"><img  src="..\pics\backbutton.svg" alt=""></button>
+  <button class="nctg"><img  src="..\pics\nextbutton.svg" alt=""></button>
+    <div class="ctg-row2">
+      <ul>
+        <li>
+           <div class="cart-icon">
+            <img src="..\pics\iconmp.svg" alt="cart">
+            <span class="phone"><img src="..\pics\mp.svg" alt=""></span> </div>
+            <p class="cennrow2">Mobile Phones</p>
+        </li>
+        <li>
+          <div class="cart-icon">
+           <img src="..\pics\iconmp.svg" alt="cart">
+           <span class="phone"><img src="..\pics\tv.svg" alt=""></span> </div>
+           <p class="cenrow2">Smart TV</p>
+       </li>
+       <li>
+        <div class="cart-icon">
+         <img src="..\pics\iconmp.svg" alt="cart">
+         <span class="phone"><img src="..\pics\sw.svg" alt=""></span> </div>
+         <p class="cennrow2">Smart Watch</p>
+     </li>
+     <li>
+      <div class="cart-icon">
+       <img src="..\pics\iconmp.svg" alt="cart">
+       <span class="phone"><img src="..\pics\lap.svg" alt=""></span> </div>
+       <p class="cenrow2">Laptops</p>
+   </li>
+   <li>
+    <div class="cart-icon">
+     <img src="..\pics\iconmp.svg" alt="cart">
+     <span class="phone"><img src="..\pics\drone.svg" alt=""></span> </div>
+     <p class="cenrow2">Drones</p>
+ </li>
+ <li>
+  <div class="cart-icon">
+   <img src="..\pics\iconmp.svg" alt="cart">
+   <span class="phone"><img src="..\pics\hd.svg" alt=""></span> </div>
+   <p class="cennrow2">Headphones</p>
+</li>
+
+      </ul>
+
+    </div>
+  </div >
+<div class="discount">
+  <div class="left-discount">
+  <span class="off"> 50% OFF</span>
+  <h2> Mackbook Air M2</h2>
+  <p>Don’t miss the last opportunity </p>
+  <button><div class="shop-now">Shop Now
+    <img src="..\pics\arrow-right.svg" alt=""></div>
+  </button>
+  <span class="mackbook"><img src="..\pics\mackbookA.svg" alt=""></span> </div>
+  <div class="right-discount">
+    <span class="off"> 50% OFF</span>
+  <h2> Iphone 14 Pro</h2>
+  <p>Don’t miss the last opportunity </p>
+  <button><div class="shop-now">Shop Now
+    <img src="..\pics\arrow-right.svg" alt=""></div>
+  </button>
+  <span class="iphone"><img src="..\pics\iphone.svg" alt=""></span>
+  </div>
+</div>
+<div class="best">
+  <p>Our Bestseller Products</p>
+  <a class="clicked" href="#">New</a>
+  <a href="#">Featured</a>
+  <a href="#">Top Rated</a>
+</div>
+<div class="kn">
+<ul class="best-seller">
+<li>
+  <div>
+    <h2>Apple iPad Pro 
+      Wi-Fi</h2>
+    <p>$1520</p>
+    <img src="..\pics\pad.svg" alt="">
+  </div>
+</li>
+</ul>
+<ul class="best-seller1">
+  <li>
+    <div class="cadr">
+      <img src="..\pics\image 19.svg" alt="">
+    
+      <h4>Apple iPad Mini 6 Wi-Fi</h4>
+      <img  src="..\pics\Frame 1000001161.svg" alt="">
+      <p>$500.00</p>
+    </div>
+  </li>
+  <li>
+    <div class="cadr">
+      <img src="..\pics\image 18.svg" alt="">
+    
+      <h4>Samsung Galaxy S22 Ultra</h4>
+      <img  src="..\pics\Frame 1000001161.svg" alt="">
+      <p>$1350.00</p>
+    </div>
+  </li>
+  </ul>
+  <ul class="best-seller2">
+    <li>
+      <div class="cadr">
+        <img src="..\pics\image 20.svg" alt="">
+      
+        <h4>Microsoft Surface Go</h4>
+        <img  src="..\pics\Frame 1000001161.svg" alt="">
+        <p>$399.00</p>
+      </div>
+    </li>
+    <li>
+      <div class="cadr">
+        <img src="..\pics\image 22.svg" alt="">
+      
+        <h4>Apple iPhone 14 Plus</h4>
+        <img  src="..\pics\Frame 1000001161.svg" alt="">
+        <p>$850.00</p>
+      </div>
+    </li>
+    </ul>
+    <ul class="best-seller3">
+      <li>
+        <div class="cadr">
+          <img src="..\pics\image 21.svg" alt="">
+        
+          <h4>LG 4K Ultra UHD TV</h4>
+          <img  src="..\pics\Frame 1000001161.svg" alt="">
+          <p>$5500.00</p>
+        </div>
+      </li>
+      <li>
+        <div class="cadr">
+          <img src="..\pics\image 17.svg" alt="">
+        
+          <h4>Bose QuietComfort 45</h4>
+          <img  src="..\pics\Frame 1000001161.svg" alt="">
+          <p>$300.00</p>
+        </div>
+      </li>
+      </ul>
+</div>
+<div class="yaro">
+  {% for big in bigs %}
+                <img src="{{ big }}" alt="" style="width: 1200px; height: 400px;">
+            {% endfor %}
+  <h2> Apple iPhone 13 Pro Max</h2>
+  <p>Don’t miss the last opportunity </p>
+  <button><div class="shop-now">Shop Now
+    <img src="..\pics\arrow-right.svg" alt=""></div>
+  </button>
+</div>
+<div class="best">
+  <p>Top Selling Products</p>
+  <a class="clicked" href="#">New</a>
+  <a href="#">Featured</a>
+  <a href="#">Top Rated</a>
+</div>
+<div class="kn">
+<ul class="top-seller">
+<li>
+  <div>
+    <h1>Apple iPad Pro 
+      Wi-Fi</h1>
+    <p>$1520</p>
+    <img  src="..\pics\image 32.svg" alt="">
+  </div>
+</li>
+</ul>
+<ul class="best-seller1">
+  <li>
+    <div class="cadr">
+      <img src="..\pics\image 24.svg" alt="">
+    
+      <h4>Panasonic Lumix DC-GH5 II</h4>
+      <img  src="..\pics\Frame 1000001161.svg" alt="">
+      <p>$1500.00</p>
+    </div>
+  </li>
+  <li>
+    <div class="cadr">
+      <img src="..\pics\image 27.svg" alt="">
+    
+      <h4>Apple iPhone 13</h4>
+      <img  src="..\pics\Frame 1000001161.svg" alt="">
+      <p>$500.00</p>
+    </div>
+  </li>
+  </ul>
+  <ul class="top-seller2">
+    <li>
+      <div class="cadr">
+        <img src="..\pics\image 25.svg" alt="">
+      
+        <h4>Asus ROG Delta S</h4>
+        <img  src="..\pics\Frame 1000001161.svg" alt="">
+        <p>$250.00</p>
+      </div>
+    </li>
+    <li>
+      <div class="cadr">
+        <img src="..\pics\image 28.svg" alt="">
+      
+        <h4>Fossil Gen 6 Smart Watch</h4>
+        <img  src="..\pics\Frame 1000001161.svg" alt="">
+        <p>$450.00</p>
+      </div>
+    </li>
+    </ul>
+    <ul class="best-seller3">
+      <li>
+        <div class="cadr">
+          <img src="..\pics\image 26.svg" alt="">
+        
+          <h4>Xiaomi Fimi X8 Mini</h4>
+          <img  src="..\pics\Frame 1000001161.svg" alt="">
+          <p>$650.00</p>
+        </div>
+      </li>
+      <li>
+        <div class="cadr">
+          <img src="..\pics\image 29.svg" alt="">
+        
+          <h4>Apple iPad Air Wi-Fi</h4>
+          <img  src="..\pics\Frame 1000001161.svg" alt="">
+          <p>$850.00</p>
+        </div>
+      </li>
+      </ul>
+</div>
+<div class="support">
+  <ul>
+    <li>
+<img class="dar" src="..\pics\dar.svg" alt="">
+    </li>
+    <li>
+<h3>Free Shipping</h3>
+    </li>
+    <li>
+    <p>Free shipping for order above $150</p>  
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <img src="..\pics\money.svg" alt="">
+    </li>
+    <li>
+      <h3>Money Guarantee</h3>
+    </li>
+    <li>
+      <p>Within 30 days for an exchange</p>  
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <img src="..\pics\sup.svg" alt="">
+    </li>
+    <li>
+      <h3>Online Support</h3>
+    </li>
+    <li>
+      <p>24 hours a day, 7 days a week</p>  
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <img src="..\pics\card.svg" alt="">
+    </li>
+    <li>
+      <h3>Flexible Payment</h3>
+    </li>
+    <li>
+      <p>Pay with multiple credit cards</p>  
+    </li>
+  </ul>
+
+</div>
+  <footer>
+    <ul class="col1">
+    <li><img class="logofooter" src="..\pics\LogoText.svg" alt="wwwwwwwwww"></li>
+    <li class="call">
+    <img  src="..\pics\call.svg" alt="wwwwwwwwww">
+    (316) 555-0116
+    </li>
+  <li class="email">
+    <img  src="..\pics\gmail.svg" alt="wwwwwwwwww">
+    electro@example.com
+  </li>
+  <li class="location">
+    <img  src="..\pics\location.svg" alt="wwwwwwwwww">
+    4140 Parker Rd. Allentown,<br> 
+      New Mexico 31134
+    </li>
+</ul>
+    <ul class="col2">
+      <li><a href="#" class="active"><b>Information</b></a></li>
+      <li> <a href="#" class="active"> My Account</a></li>
+      <li><a href="#" class="active">Login</a></li>
+      <li><a href="#" class="active">My Cart</a></li>
+      <li> <a href="#" class="active">My Wishlist</a></li>
+      <li><a href="#" class="active">Checkout</a></li>
+    </ul>
+  
+      <ul class="col3">
+            <li><a href="#" class="active"><b>Service</b></a></li>
+            <li><a href="#" class="active">About Us</a></li>
+            <li><a href="#" class="active">Careers</a></li>
+            <li> <a href="#" class="active">Delivery Information</a> </li>
+            <li><a href="#" class="active">Privacy Policy</a> </li>
+            <li> <a href="#" class="active"> Terms & Conditions</a> </li>
+          </ul>
+          <ul class="col4">
+            <li><b>Subsribe</b></li>
+            <li>Enter your email below to be the first to<br>  
+              know about new collections.</li>
+          <div class="emailfield"> <img  src="..\pics\gmail.svg" alt="wwwwwwwwww">
+            <p>Your Email</p>
+            <img  class="rightar" src="..\pics\arrow-right.svg" alt="wwwwwwwwww">
+          </div>
+          </ul>
+  </footer>
+  <div class="footer">
+    <div class="line"></div>
+    <ul class="coll1">
+      <li><a href="#" class="active"><img src="..\pics\Visa.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\Mastercard.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\GooglePay.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\Amex.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\PayPal.svg" alt=""></a></li>
+    </ul>
+    <ul class="coll2">
+      <li>©2023 Electro All Rights are reserved️ </li>
+    </ul>
+    <ul class="coll3">
+      <li><a href="#" class="active"><img src="..\pics\fb.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\instagram.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\tw.svg" alt=""></a></li>
+    </ul>
+  </div>
+
+</body>
+</html>

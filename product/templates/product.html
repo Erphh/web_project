@@ -1,0 +1,379 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1440px, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'product.css'%}">
+  <title>navbar</title>
+</head>
+<body>
+  <header>
+    <img class="logo" src="..\pics\Group 427319094.svg" alt="logo">
+    <select class="all" name="All" id="all">
+      <option value="All">All</option>
+    </select>
+    <div class="search-bar">
+      <img class="searchlogo" src="..\pics\Union.svg" alt="search button">
+      <input type="search" placeholder="search">
+    </div>
+    <div class="search-button">
+      <button type="submit"> Search</button>
+    </div>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#"><img src="..\pics\search 02.svg" alt="search"></a></li>
+        <li><a href="#"><img src="..\pics\Vector.svg" alt=""></a></li>
+        <li>
+          <div class="cart-icon" onclick="minicart()" >
+            <img src="..\pics\search 4.svg" alt="cart">
+            <span class="cart-count" id="cart-countt">2</span> </div>
+        </li>
+      </ul>
+    </nav>
+    <a class="cta" href="#"><button>Login</button></a>
+    <div class="row2">
+      <ul class="nav__links">
+        <li><div class="vertical-menu">
+          <img class="menu" src="..\pics\menu-line-horizontal.svg" alt="">
+          <a href="#" class="active">All Categories</a>
+          <img class="arrow" src="..\pics\Vector (Stroke).svg" alt="">
+        </div></li>
+        <li>Home</li>
+        <li><div class="menu"><a href="#" class="active">Shop</a>
+          <img class="arrow" src="..\pics\Vector (Stroke).svg" alt=""></div></li>
+        <li>About Us</li>
+        <li>Blog</li>
+        <li>Contact Us</li>
+    </div>
+  </header>
+  <div class="breadcrumb">
+    <a>Home</a> >
+    <a>Shop</a> >
+    <a>Apple iPhone 14 Pro</a> 
+  </div>
+  <div class="upp">
+    <div class="leftup">
+    <ul>
+      <li>
+        {% if images %}
+        <div class="big"><img class="" src="{{ images.0.image.url }}" alt="wwwwwwwwww"style="width: 250px; height: 400px;"></div></li>
+        {% endif %}
+      <li>
+        {% for image in images|slice:"1:" %}
+        <div class="small" ><img src="{{ image.image.url }}" alt="product" style="width: 50px; height: 80px;"></div>
+    {% endfor %}     
+      </li>
+    </ul>
+  </div>
+    <div class="rightup">
+      <ul>
+        <li>
+          <h1>{{ product.name }}</h1>
+          <img class="ins" src="..\pics\ins.svg" alt="wwwwwwwwww">
+        </li>
+        <li>
+          <img class="" src="..\pics\str.svg" alt="wwwwwwwwww">
+          <p id="re"> 5.0 (121 Reviews)</p>
+        </li>
+        <li id="price">
+          <p id="pricee">{{ product.price }}</p>
+        </li>
+        <li><p id="des">{{product.description}}</p></li>
+        <li><p id="color"> Color</p></li>
+        <li class="vizh">
+          <div id="gray" onclick="changep()"></div>
+          <div id="blue" onclick="changep()"></div>
+          <div id="black" onclick="changep()"></div>
+          <div id="purple" onclick="changep()"></div>
+        </li>
+        <li >
+          <button id="minus">
+            -
+          </button>
+          <input id="quanity"  maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text" value="1" name="code">
+          <button id="plus">
+            +
+          </button>
+
+          <form method="post" action="{% url 'add_to_cart' product.id %}">
+            {% csrf_token %}
+            <button class="cart" type="submit" onclick="addtocart()">Add to Cart</button>
+        </form>
+          <button class="fav">
+            <img class="" src="..\pics\fav.svg" alt="wwwwwwwwww">
+          </button>
+        </li>
+        <li><p id="share"> Share</p></li>
+        <li>
+          <img class="med" src="..\pics\fac.svg" alt="wwwwwwwwww">
+          <img class="med" src="..\pics\twi.svg" alt="wwwwwwwwww">
+          <img class="" src="..\pics\inss.svg" alt="wwwwwwwwww">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="info">
+    <ul>
+      <li id="desc" onclick="opendes()"> <a id="desc1">Descriptions</a></li>
+      <li id="add" onclick="openadd()"><a id="add1">Additional Information</a> </li>
+      <li id="rev" onclick="openrev()"><a id="rev1">Reviews</a></li>
+    </ul>
+  </div>
+  <p id="details">
+    {{product.details}}
+  </p>
+  <table id="addd">
+    <tbody>
+      <tr>
+      <td class="spec">Brand</td>
+      <td>Apple</td>
+    </tr>
+    <tr>
+      <td class="spec">Item Height</td>
+      <td>65 CM</td>
+    </tr>
+    <tr>
+      <td class="spec">Item Width</td>
+      <td>31.4 CM</td>
+    </tr>
+    <tr>
+      <td class="spec">Screen Size</td>
+      <td>6.5 Inch</td>
+    </tr>
+    <tr>
+      <td class="spec">Model Number</td>
+      <td>MF841HN/A</td>
+    </tr>
+    <tr>
+      <td class="spec">RAM Size</td>
+      <td>6 GB</td>
+    </tr>
+    <tr>
+      <td class="spec">Operating System</td>
+      <td>ios 17</td>
+    </tr>
+    </tbody>
+  </table>
+  <div id="rew">
+    <p class="Customer">Customer Reviews</p>
+    <div class="crev">
+    <p class="namer">Mark Williams</p>
+    <img class="stars" src="..\pics\str.svg" alt="">
+    <img class="prof" src="..\pics\prof1.svg" alt="">
+    <p class="titler">Excellent Product, I Love It 😍</p>
+    <p class="bodyr">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+       as opposed to using 'Content here, content here', making it look like readable English.</p>
+    <span class="revs">
+      <p class="r1">Review by</p>
+      <p class="r2">Electro</p>
+      <p class="r3">Posted on</p>
+      <p class="r4">Sep 08, 2023</p>
+    </span>
+  </div>
+  <div class="crev">
+    <p class="namer">Alexa Johnson</p>
+    <img class="stars" src="..\pics\str.svg" alt="">
+    <img class="prof" src="..\pics\prof2.svg" alt="">
+    <p class="titler">My Brother is very much happy with this iPhone</p>
+    <p class="bodyr">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+       as opposed to using 'Content here, content here', making it look like readable English.</p>
+    <span class="revs">
+      <p class="r1">Review by</p>
+      <p class="r2">Electro</p>
+      <p class="r3">Posted on</p>
+      <p class="r4">Sep 08, 2023</p>
+    </span>
+  </div>
+  <p class="addrev">Add your Review</p>
+  <div class="writerev">
+    <p class="rating">Your Rating</p>
+    <div >
+      <ul class="starss">
+        <li>
+          <img src="../pics/Star 2.svg" alt="" onmouseover="this.src='../pics/Star 2h.svg'" onmouseleave="this.src='../pics/Star 2.svg'" onclick="console.log(1)">
+        </li>
+        <li>
+          <img src="..\pics\2star.svg" alt="" onmouseover="this.src='../pics/2starh.svg'" onmouseleave="this.src='../pics/2star.svg'" onclick="console.log(2)">
+        </li>
+        <li>
+          <img src="..\pics\3star.svg" alt="" onmouseover="this.src='../pics/3starh.svg'" onmouseleave="this.src='../pics/3star.svg'" onclick="console.log(3)">
+        </li>
+        <li>
+          <img src="..\pics\4star.svg" alt="" onmouseover="this.src='../pics/4starh.svg'" onmouseleave="this.src='../pics/4star.svg'" onclick="console.log(4)">
+        </li>
+        <li id="final">
+          <img  src="..\pics\5star.svg" alt="" onmouseover="this.src='../pics/5starh.svg'" onmouseleave="this.src='../pics/5star.svg'" onclick="console.log(5)">
+        </li>
+      </ul>
+    </div>
+    <ul class="texts">
+      <li><label  id="ea" for="name">Name</label></li>
+      <li class="na"><input id="nam" type="text" value="Enter Your Name" name="name"></li>
+    </ul>
+      <ul class="texts">
+      <li><label class="ea" id="ea" for="email-address">Email Address</label></li>
+      <li> <input id="nam" type="email" value="Enter Your Email" name="email-address"></li>
+    </ul>
+    <ul class="texts">
+      <li><label class="pa" for="review">Your Review</label></li>
+      <li><input class="pas" type="text" value="Enter Your Review" name="review"></li>
+    </ul>
+      
+      
+      
+     
+      
+      
+      <button class="loginn"
+      type="submit">Submit</button>
+  </div>
+  </div>
+  <p id="rel">
+    Related Products
+  </p>
+  <div class="related">
+    <ul>
+      <li class="photo">
+        <img src="..\pics\image 222.svg" alt="">
+      </li>
+      <li id="na">Apple iPhone 14 Plus</li>
+      <li><img src="..\pics\str.svg" alt=""></li>
+      <li>$850.00</li>
+    </ul>
+    <ul>
+      <li class="photo">
+        <img src="..\pics\image 266.svg" alt="">
+      </li>
+      <li id="na">Xiaomi Fimi X8 Mini</li>
+      <li><img src="..\pics\str.svg" alt=""></li>
+      <li>$650.00</li>
+    </ul>
+    <ul>
+      <li class="photo">
+        <img src="..\pics\image 119.svg" alt="">
+      </li>
+      <li id="na">Apple iPad Mini 6 Wi-Fi</li>
+      <li><img src="..\pics\str.svg" alt=""></li>
+      <li>$500.00</li>
+    </ul>
+    <ul>
+      <li class="photo">
+        <img src="..\pics\image 255.svg" alt="">
+      </li>
+      <li id="na">Asus ROG Delta S</li>
+      <li><img src="..\pics\str.svg" alt=""></li>
+      <li>$250.00</li>
+    </ul>
+  </div>
+  <div class="mini-cart" id="mini">
+    <p class="tedad">You have <b>2 items</b> in your cart</p>
+    <ul class="carts">
+      <ul>
+        <li class="ph">
+          <img src="..\pics\image 166.svg" alt="">
+        </li>
+      </ul>
+      <ul>
+        <li>Apple iPhone 14 Pro</li>
+        <li><b>$1999.00</b></li>
+        <li>QTY: 1</li>
+      </ul>
+      <button id="delete" onclick="deletecart()">
+        <img src="..\pics\trash.svg" alt="">
+      </button>
+    </ul>
+
+    <ul class="carts">
+      <ul>
+        <li class="ph">
+          <img src="..\pics\image 166.svg" alt="">
+        </li>
+       
+      </ul>
+      <ul>
+        <li>Apple iPhone 12 Pro</li>
+        <li><b>$1099.00</b></li>
+        <li>QTY: 1</li>
+      </ul>
+      <button id="delete" onclick="deletecart()">
+        <img src="..\pics\trash.svg" alt="">
+      </button>
+    </ul>
+    <div class="bottom">
+      <b>Subtotal</b> <b id="pric">$2249.00</b>
+    </div>
+    <button class="view">
+      View Cart
+    </button>
+    <button class="check">
+      Checkout
+    </button>
+  </div>
+  </div>
+  <footer>
+    <ul class="col1">
+    <li><img class="logofooter" src="..\pics\LogoText.svg" alt="wwwwwwwwww"></li>
+    <li class="call">
+    <img  src="..\pics\call.svg" alt="wwwwwwwwww">
+    (316) 555-0116
+    </li>
+  <li class="email">
+    <img  src="..\pics\gmail.svg" alt="wwwwwwwwww">
+    electro@example.com
+  </li>
+  <li class="location">
+    <img  src="..\pics\location.svg" alt="wwwwwwwwww">
+    4140 Parker Rd. Allentown,<br> 
+      New Mexico 31134
+    </li>
+</ul>
+    <ul class="col2">
+      <li><a href="#" class="active"><b>Information</b></a></li>
+      <li> <a href="#" class="active"> My Account</a></li>
+      <li><a href="#" class="active">Login</a></li>
+      <li><a href="#" class="active">My Cart</a></li>
+      <li> <a href="#" class="active">My Wishlist</a></li>
+      <li><a href="#" class="active">Checkout</a></li>
+    </ul>
+  
+      <ul class="col3">
+            <li><a href="#" class="active"><b>Service</b></a></li>
+            <li><a href="#" class="active">About Us</a></li>
+            <li><a href="#" class="active">Careers</a></li>
+            <li> <a href="#" class="active">Delivery Information</a> </li>
+            <li><a href="#" class="active">Privacy Policy</a> </li>
+            <li> <a href="#" class="active"> Terms & Conditions</a> </li>
+          </ul>
+          <ul class="col4">
+            <li><b>Subsribe</b></li>
+            <li>Enter your email below to be the first to<br>  
+              know about new collections.</li>
+          <div class="emailfield"> <img  src="..\pics\gmail.svg" alt="wwwwwwwwww">
+            <p>Your Email</p>
+            <img  class="rightar" src="..\pics\arrow-right.svg" alt="wwwwwwwwww">
+          </div>
+          </ul>
+  </footer>
+  <div class="footer">
+    <div class="line"></div>
+    <ul class="coll1">
+      <li><a href="#" class="active"><img src="..\pics\Visa.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\Mastercard.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\GooglePay.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\Amex.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\PayPal.svg" alt=""></a></li>
+    </ul>
+    <ul class="coll2">
+      <li>©2023 Electro All Rights are reserved️ </li>
+    </ul>
+    <ul class="coll3">
+      <li><a href="#" class="active"><img src="..\pics\fb.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\instagram.svg" alt=""></a></li>
+      <li><a href="#" class="active"><img src="..\pics\tw.svg" alt=""></a></li>
+    </ul>
+  </div>
+  <script  src="{% static 'product.js'%}"></script>
+</body>
+</html>
